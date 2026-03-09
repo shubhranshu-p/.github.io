@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shubhranshu Sudeepta Panda — CS Student & Developer</title>
+  <meta name="description" content="Final-year Computer Science student at VIT Amaravati, building practical tools with Java.">
+
+  <!-- Fonts (matching reference site) -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;700&family=DM+Sans:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2300FF9C'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='sans-serif' font-size='14' font-weight='bold' fill='%23121212'%3ESP%3C/text%3E%3C/svg%3E">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="nav-wrapper" id="navWrapper">
+    <div class="nav-container">
+      <!-- Hamburger Menu -->
+      <div class="hamburger-container">
+        <button class="hamburger-button" id="hamburgerBtn" aria-label="Toggle menu">☰</button>
+        <div class="dropdown-menu" id="dropdownMenu" style="display: none;">
+          <ul>
+            <li><a href="#hero">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#experience">EXPERIENCE</a></li>
+            <li><a href="#projects">PROJECTS</a></li>
+            <li><a href="#contact">CONTACT ME</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Theme Toggle -->
+      <label class="toggle-switch" id="themeToggle">
+        <input type="checkbox" id="themeCheckbox">
+        <span class="slider" id="sliderBg" style="background-color: #333;"></span>
+        <span class="knob" id="knobEl" style="left: 2px;"></span>
+      </label>
+    </div>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero-section" id="hero">
+    <div class="hero-content">
+      <h1 class="hero-title"><span class="hero-line">SHUBHRANSHU</span><br><span class="hero-line">SUDEEPTA</span><br><span class="hero-line">PANDA</span></h1>
+      <div class="hero-image-container" id="heroImage">
+        <img src="profile.jpg" alt="Shubhranshu Sudeepta Panda">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== INTRO SECTION ===== -->
+  <section class="intro-section">
+    <p class="intro-text">
+      I'm Shubhranshu Sudeepta Panda – a final-year Computer Science student at VIT Amaravati,
+      passionate about building practical tools that make life easier. My sweet spot is
+      Java — I enjoy designing clean, modular solutions whether it's parsing thousands
+      of log files or detecting duplicates across entire file systems.
+    </p>
+    <div class="scroll-prompt">
+      <div class="scroll-track">
+        <div class="scroll-line"></div>
+      </div>
+      <p class="scroll-text">SCROLL</p>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="about-section" id="about">
+    <div class="about-header">
+      <h2 class="about-title">ABOUT ME</h2>
+      <div class="line-container">
+        <div class="line-base"></div>
+        <div class="line-highlight"></div>
+      </div>
+    </div>
+    <div class="about-content">
+      <div class="about-left">
+        <p>TL;DR I'm passionate about building efficient, reliable tools and translating complex problems into clean, modular Java solutions.</p>
+      </div>
+      <div class="about-right">
+        <p>I'm a curious and driven Computer Science student at VIT Amaravati who loves turning real-world problems into clean, reliable code. Right now, I'm all about leveling up — diving into new tools, saying yes to challenges, and building things that make sense and scale. Whether it's experimenting with data structures or simplifying clunky file operations, I enjoy the process as much as the result.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE SECTION ===== -->
+  <section class="exp-section" id="experience">
+    <div class="exp-header">
+      <h2 class="exp-title">EXPERIENCE</h2>
+      <div class="line-container">
+        <div class="line-base"></div>
+        <div class="line-highlight"></div>
+      </div>
+    </div>
+    <div class="experience-content">
+      <div class="experience-left">
+        <h3>CS Student & Developer</h3>
+        <p class="company">VIT Amaravati</p>
+        <p class="dates">2022 – 2026 (4 Yr)</p>
+        <p class="desc">Built command-line Java applications for log analysis and file deduplication. Applied data structures, OOP principles, and modular design to create clean, maintainable solutions for real-world problems.</p>
+      </div>
+      <div class="experience-right">
+        <h3>Cloud Certified Professional</h3>
+        <p class="company">Oracle & Microsoft</p>
+        <p class="dates">2024 – 2025</p>
+        <p class="desc">Earned Oracle Cloud Infrastructure 2025 Foundations Associate, Microsoft Azure AI Fundamentals, and Google Analytics certifications, demonstrating cloud infrastructure and AI competency.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MARQUEE SECTION ===== -->
+  <section class="marquee-section">
+    <div class="marquee-line marquee-line-left">
+      <span>JAVA  SQL  MYSQL  DSA  OOP  DBMS  FILE I/O  HASHMAPS  JAVA  SQL  MYSQL  DSA  OOP  DBMS  FILE I/O  HASHMAPS  </span>
+    </div>
+    <div class="marquee-line marquee-line-right">
+      <span>COMPUTER NETWORKS  OPERATING SYSTEMS  MODULAR DESIGN  EXCEPTION HANDLING  COMPUTER NETWORKS  OPERATING SYSTEMS  MODULAR DESIGN  EXCEPTION HANDLING  </span>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS SECTION ===== -->
+  <section class="projects-section" id="projects">
+    <div class="projects-header">
+      <h2 class="projects-title">SELECTED PROJECTS</h2>
+      <div class="line-container">
+        <div class="line-base"></div>
+        <div class="line-highlight"></div>
+      </div>
+    </div>
+    <div class="projects-grid">
+      <a href="https://github.com/shubhranshu-p" target="_blank" rel="noopener" class="project-card">
+        <div class="project-img-wrap">
+          <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600&h=400&fit=crop" alt="Java Log Analyzer">
+        </div>
+        <div class="project-info">
+          <h3 class="project-name">Java Log Analyzer</h3>
+          <p class="project-desc">Command-line tool for parsing & analyzing thousands of log files with Java</p>
+        </div>
+      </a>
+      <a href="https://github.com/shubhranshu-p" target="_blank" rel="noopener" class="project-card">
+        <div class="project-img-wrap">
+          <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop" alt="Duplicate File Finder">
+        </div>
+        <div class="project-info">
+          <h3 class="project-name">Duplicate File Finder</h3>
+          <p class="project-desc">File system deduplication tool using hash-based detection in Java</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="contact-section" id="contact">
+    <div class="contact-header">
+      <h2 class="contact-title">CONTACT ME</h2>
+      <div class="line-container">
+        <div class="line-base"></div>
+        <div class="line-highlight"></div>
+      </div>
+    </div>
+    <div class="contact-content">
+      <div class="contact-left">
+        <p>I'm always excited to collaborate on innovative projects and explore new opportunities. Whether you have a question, an idea, or just want to connect, I'd love to hear from you.</p>
+      </div>
+      <div class="contact-right">
+        <div class="contact-icons">
+          <a href="https://linkedin.com/in/shubhranshupanda" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 448 512" fill="currentColor">
+              <path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/>
+            </svg>
+          </a>
+          <a href="https://github.com/shubhranshu-p" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 496 512" fill="currentColor">
+              <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/>
+            </svg>
+          </a>
+          <a href="mailto:shubhranshusudeepta2003@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 512 512" fill="currentColor">
+              <path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/>
+            </svg>
+          </a>
+        </div>
+        <p style="margin-top: 1rem;">Bhubaneswar, India</p>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
