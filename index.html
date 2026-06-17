@@ -3,194 +3,269 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shubhranshu Sudeepta Panda — CS Student & Developer</title>
-  <meta name="description" content="Final-year Computer Science student at VIT Amaravati, building practical tools with Java.">
+  <title>Shubhranshu Sudeepta Panda | Java Backend Developer</title>
+  <meta name="description" content="Portfolio of Shubhranshu Sudeepta Panda, a final-year Computer Science student focused on Java, Spring Boot, REST APIs, Spring Data JPA, and MySQL.">
+  <meta name="theme-color" content="#101114">
+  <meta property="og:title" content="Shubhranshu Sudeepta Panda | Java Backend Developer">
+  <meta property="og:description" content="Backend-focused portfolio featuring Java, Spring Boot, REST APIs, MySQL, and core computer science foundations.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://shubhranshupanda.tech/">
+  <meta property="og:image" content="https://shubhranshupanda.tech/profile.jpg">
 
-  <!-- Fonts (matching reference site) -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;700&family=DM+Sans:wght@400;500;700&display=swap"
-    rel="stylesheet"
-  />
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2300FF9C'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='sans-serif' font-size='14' font-weight='bold' fill='%23121212'%3ESP%3C/text%3E%3C/svg%3E">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2338d39f'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Arial,sans-serif' font-size='14' font-weight='700' fill='%23101114'%3ESP%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- ===== NAVIGATION ===== -->
-  <nav class="nav-wrapper" id="navWrapper">
-    <div class="nav-container">
-      <!-- Hamburger Menu -->
-      <div class="hamburger-container">
-        <button class="hamburger-button" id="hamburgerBtn" aria-label="Toggle menu">☰</button>
-        <div class="dropdown-menu" id="dropdownMenu" style="display: none;">
-          <ul>
-            <li><a href="#hero">HOME</a></li>
-            <li><a href="#about">ABOUT</a></li>
-            <li><a href="#experience">EXPERIENCE</a></li>
-            <li><a href="#projects">PROJECTS</a></li>
-            <li><a href="#contact">CONTACT ME</a></li>
+  <header class="site-header" id="top">
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="brand" href="#home" aria-label="Shubhranshu Sudeepta Panda home">
+        <span class="brand-mark" aria-hidden="true">SP</span>
+        <span class="brand-text">Shubhranshu</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open navigation" aria-controls="navMenu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-menu" id="navMenu">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light theme">
+        <span class="theme-toggle-track" aria-hidden="true">
+          <span class="theme-toggle-knob"></span>
+        </span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero-section section-shell" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">Java Backend Developer</p>
+        <h1>Shubhranshu Sudeepta Panda</h1>
+        <p class="hero-lede">
+          Final-year Computer Science student building reliable backend systems with Java, Spring Boot,
+          REST APIs, Spring Data JPA, and MySQL.
+        </p>
+        <div class="hero-actions" aria-label="Primary actions">
+          <a class="button button-primary" href="#contact">Contact Me</a>
+          <a class="button button-secondary" href="#skills">View Skills</a>
+        </div>
+      </div>
+
+      <figure class="hero-portrait">
+        <img src="profile.jpg" alt="Portrait of Shubhranshu Sudeepta Panda" width="720" height="900" decoding="async" fetchpriority="high">
+        <figcaption>Backend-focused CSE student from Bhubaneswar, Odisha.</figcaption>
+      </figure>
+
+      <dl class="hero-facts" aria-label="Profile highlights">
+        <div>
+          <dt>Focus</dt>
+          <dd>Backend APIs</dd>
+        </div>
+        <div>
+          <dt>Stack</dt>
+          <dd>Java + Spring Boot</dd>
+        </div>
+        <div>
+          <dt>Database</dt>
+          <dd>MySQL</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="about-section section-shell" id="about">
+      <div class="section-heading">
+        <p class="eyebrow">About</p>
+        <h2>Turning backend requirements into clear, testable systems.</h2>
+      </div>
+      <div class="about-grid">
+        <p class="about-lede">
+          I am a final-year Computer Science and Engineering student at Vellore Institute of Technology,
+          Amaravati, with a practical interest in backend development, API design, database modeling,
+          and problem-solving.
+        </p>
+        <div class="about-copy">
+          <p>
+            My work is centered on Java and Spring Boot: designing REST endpoints, modeling relational
+            data, handling validation and exceptions, and keeping API responses predictable for clients.
+          </p>
+          <p>
+            I also keep the computer science fundamentals close: data structures and algorithms, OOP,
+            DBMS, operating systems, and computer networks.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills-section section-shell" id="skills">
+      <div class="section-heading">
+        <p class="eyebrow">Skills</p>
+        <h2>Backend stack and core foundations.</h2>
+      </div>
+      <div class="skills-grid">
+        <article class="skill-card">
+          <h3>Languages</h3>
+          <ul class="tag-list">
+            <li>Java</li>
+            <li>SQL</li>
           </ul>
+        </article>
+        <article class="skill-card">
+          <h3>Backend</h3>
+          <ul class="tag-list">
+            <li>Spring Boot</li>
+            <li>REST APIs</li>
+            <li>Spring Data JPA</li>
+            <li>Spring Scheduler</li>
+          </ul>
+        </article>
+        <article class="skill-card">
+          <h3>Database</h3>
+          <ul class="tag-list">
+            <li>MySQL</li>
+            <li>Relational Database Design</li>
+            <li>CRUD Operations</li>
+          </ul>
+        </article>
+        <article class="skill-card">
+          <h3>Tools</h3>
+          <ul class="tag-list">
+            <li>Git</li>
+            <li>GitHub</li>
+            <li>Maven</li>
+            <li>Postman</li>
+            <li>IntelliJ IDEA</li>
+          </ul>
+        </article>
+        <article class="skill-card">
+          <h3>Core CS</h3>
+          <ul class="tag-list">
+            <li>Data Structures and Algorithms</li>
+            <li>OOP</li>
+            <li>DBMS</li>
+            <li>Operating Systems</li>
+            <li>Computer Networks</li>
+          </ul>
+        </article>
+        <article class="skill-card">
+          <h3>Concepts</h3>
+          <ul class="tag-list">
+            <li>API Design</li>
+            <li>Validation</li>
+            <li>Exception Handling</li>
+            <li>Structured API Responses</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="education-section section-shell" id="education">
+      <div class="section-heading">
+        <p class="eyebrow">Education + Certifications</p>
+        <h2>Academic base with cloud and analytics credentials.</h2>
+      </div>
+      <div class="timeline-grid">
+        <article class="info-card">
+          <p class="meta">2022 - 2026</p>
+          <h3>B.Tech. Computer Science and Engineering</h3>
+          <p>Vellore Institute of Technology, Amaravati</p>
+          <p>CGPA: 7.96/10.0</p>
+          <p class="muted">Relevant coursework: DSA, DBMS, OOP, Software Engineering, Computer Networks.</p>
+        </article>
+        <article class="info-card">
+          <p class="meta">Certifications</p>
+          <h3>Professional Learning</h3>
+          <ul class="check-list">
+            <li>Oracle Cloud Infrastructure 2025 Certified Foundations Associate</li>
+            <li>Microsoft Certified: Azure AI Fundamentals</li>
+            <li>Google Analytics Certification</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="projects-section section-shell" id="projects">
+      <div class="section-heading">
+        <p class="eyebrow">Projects</p>
+        <h2>New project work will be added here soon.</h2>
+      </div>
+      <div class="projects-grid">
+        <article class="project-card" aria-label="Project placeholder one">
+          <p class="meta">Project Slot 01</p>
+          <h3>Backend API Project</h3>
+          <p>
+            Details, repository, screenshots, and deployment information will be added after the new
+            project is ready.
+          </p>
+          <span class="status-pill">Coming Soon</span>
+        </article>
+        <article class="project-card" aria-label="Project placeholder two">
+          <p class="meta">Project Slot 02</p>
+          <h3>System Design Project</h3>
+          <p>
+            This space is reserved for a new build with finalized scope, source links, and live access.
+          </p>
+          <span class="status-pill">Coming Soon</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact-section section-shell" id="contact">
+      <div class="section-heading">
+        <p class="eyebrow">Contact</p>
+        <h2>Open to backend development opportunities and collaborations.</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-copy">
+          <p>
+            The fastest way to reach me is email. You can also connect with me on LinkedIn or review my
+            public work on GitHub.
+          </p>
+          <div class="contact-links" aria-label="Contact links">
+            <a href="mailto:shubhranshusudeeptapanda@gmail.com">Email</a>
+            <a href="https://linkedin.com/in/shubhranshupanda" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://github.com/shubhranshu-p" target="_blank" rel="noopener">GitHub</a>
+          </div>
         </div>
-      </div>
 
-      <!-- Theme Toggle -->
-      <label class="toggle-switch" id="themeToggle">
-        <input type="checkbox" id="themeCheckbox">
-        <span class="slider" id="sliderBg" style="background-color: #333;"></span>
-        <span class="knob" id="knobEl" style="left: 2px;"></span>
-      </label>
-    </div>
-  </nav>
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="field-group">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field-group">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="field-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          <button class="button button-primary" type="submit">Open Email Draft</button>
+        </form>
+      </div>
+    </section>
+  </main>
 
-  <!-- ===== HERO SECTION ===== -->
-  <section class="hero-section" id="hero">
-    <div class="hero-content">
-      <h1 class="hero-title"><span class="hero-line">SHUBHRANSHU</span><br><span class="hero-line">SUDEEPTA</span><br><span class="hero-line">PANDA</span></h1>
-      <div class="hero-image-container" id="heroImage">
-        <img src="profile.jpg" alt="Shubhranshu Sudeepta Panda">
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== INTRO SECTION ===== -->
-  <section class="intro-section">
-    <p class="intro-text">
-      I'm Shubhranshu Sudeepta Panda – a final-year Computer Science student at VIT Amaravati,
-      passionate about building practical tools that make life easier. My sweet spot is
-      Java — I enjoy designing clean, modular solutions whether it's parsing thousands
-      of log files or detecting duplicates across entire file systems.
-    </p>
-    <div class="scroll-prompt">
-      <div class="scroll-track">
-        <div class="scroll-line"></div>
-      </div>
-      <p class="scroll-text">SCROLL</p>
-    </div>
-  </section>
-
-  <!-- ===== ABOUT SECTION ===== -->
-  <section class="about-section" id="about">
-    <div class="about-header">
-      <h2 class="about-title">ABOUT ME</h2>
-      <div class="line-container">
-        <div class="line-base"></div>
-        <div class="line-highlight"></div>
-      </div>
-    </div>
-    <div class="about-content">
-      <div class="about-left">
-        <p>TL;DR I'm passionate about building efficient, reliable tools and translating complex problems into clean, modular Java solutions.</p>
-      </div>
-      <div class="about-right">
-        <p>I'm a curious and driven Computer Science student at VIT Amaravati who loves turning real-world problems into clean, reliable code. Right now, I'm all about leveling up — diving into new tools, saying yes to challenges, and building things that make sense and scale. Whether it's experimenting with data structures or simplifying clunky file operations, I enjoy the process as much as the result.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== EXPERIENCE SECTION ===== -->
-  <section class="exp-section" id="experience">
-    <div class="exp-header">
-      <h2 class="exp-title">EXPERIENCE</h2>
-      <div class="line-container">
-        <div class="line-base"></div>
-        <div class="line-highlight"></div>
-      </div>
-    </div>
-    <div class="experience-content">
-      <div class="experience-left">
-        <h3>CS Student & Developer</h3>
-        <p class="company">VIT Amaravati</p>
-        <p class="dates">2022 – 2026 (4 Yr)</p>
-        <p class="desc">Built command-line Java applications for log analysis and file deduplication. Applied data structures, OOP principles, and modular design to create clean, maintainable solutions for real-world problems.</p>
-      </div>
-      <div class="experience-right">
-        <h3>Cloud Certified Professional</h3>
-        <p class="company">Oracle & Microsoft</p>
-        <p class="dates">2024 – 2025</p>
-        <p class="desc">Earned Oracle Cloud Infrastructure 2025 Foundations Associate, Microsoft Azure AI Fundamentals, and Google Analytics certifications, demonstrating cloud infrastructure and AI competency.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== MARQUEE SECTION ===== -->
-  <section class="marquee-section">
-    <div class="marquee-line marquee-line-left">
-      <span>JAVA  SQL  MYSQL  DSA  OOP  DBMS  FILE I/O  HASHMAPS  JAVA  SQL  MYSQL  DSA  OOP  DBMS  FILE I/O  HASHMAPS  </span>
-    </div>
-    <div class="marquee-line marquee-line-right">
-      <span>COMPUTER NETWORKS  OPERATING SYSTEMS  MODULAR DESIGN  EXCEPTION HANDLING  COMPUTER NETWORKS  OPERATING SYSTEMS  MODULAR DESIGN  EXCEPTION HANDLING  </span>
-    </div>
-  </section>
-
-  <!-- ===== PROJECTS SECTION ===== -->
-  <section class="projects-section" id="projects">
-    <div class="projects-header">
-      <h2 class="projects-title">SELECTED PROJECTS</h2>
-      <div class="line-container">
-        <div class="line-base"></div>
-        <div class="line-highlight"></div>
-      </div>
-    </div>
-    <div class="projects-grid">
-      <a href="https://github.com/shubhranshu-p" target="_blank" rel="noopener" class="project-card">
-        <div class="project-img-wrap">
-          <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600&h=400&fit=crop" alt="Java Log Analyzer">
-        </div>
-        <div class="project-info">
-          <h3 class="project-name">Java Log Analyzer</h3>
-          <p class="project-desc">Command-line tool for parsing & analyzing thousands of log files with Java</p>
-        </div>
-      </a>
-      <a href="https://github.com/shubhranshu-p" target="_blank" rel="noopener" class="project-card">
-        <div class="project-img-wrap">
-          <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop" alt="Duplicate File Finder">
-        </div>
-        <div class="project-info">
-          <h3 class="project-name">Duplicate File Finder</h3>
-          <p class="project-desc">File system deduplication tool using hash-based detection in Java</p>
-        </div>
-      </a>
-    </div>
-  </section>
-
-  <!-- ===== CONTACT SECTION ===== -->
-  <section class="contact-section" id="contact">
-    <div class="contact-header">
-      <h2 class="contact-title">CONTACT ME</h2>
-      <div class="line-container">
-        <div class="line-base"></div>
-        <div class="line-highlight"></div>
-      </div>
-    </div>
-    <div class="contact-content">
-      <div class="contact-left">
-        <p>I'm always excited to collaborate on innovative projects and explore new opportunities. Whether you have a question, an idea, or just want to connect, I'd love to hear from you.</p>
-      </div>
-      <div class="contact-right">
-        <div class="contact-icons">
-          <a href="https://linkedin.com/in/shubhranshupanda" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <svg viewBox="0 0 448 512" fill="currentColor">
-              <path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/>
-            </svg>
-          </a>
-          <a href="https://github.com/shubhranshu-p" target="_blank" rel="noopener" aria-label="GitHub">
-            <svg viewBox="0 0 496 512" fill="currentColor">
-              <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/>
-            </svg>
-          </a>
-          <a href="mailto:shubhranshusudeepta2003@gmail.com" aria-label="Email">
-            <svg viewBox="0 0 512 512" fill="currentColor">
-              <path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/>
-            </svg>
-          </a>
-        </div>
-        <p style="margin-top: 1rem;">Bhubaneswar, India</p>
-      </div>
-    </div>
-  </section>
+  <footer class="site-footer">
+    <p>Shubhranshu Sudeepta Panda</p>
+    <a href="#home">Back to top</a>
+  </footer>
 
   <script src="script.js"></script>
 </body>
