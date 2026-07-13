@@ -13,6 +13,10 @@ export const metadata: Metadata = {
   creator: "Shubhranshu Sudeepta Panda",
   publisher: "Shubhranshu Sudeepta Panda",
   metadataBase: new URL("https://shubhranshupanda.tech"),
+  icons: {
+    icon: [{ url: "/favicon.svg?v=2", type: "image/svg+xml" }],
+    shortcut: ["/favicon.svg?v=2"],
+  },
   openGraph: { title: "Shubhranshu Sudeepta Panda", description: "Java Backend Developer · Spring Boot · REST APIs · MySQL", images: ["/og.png"], type: "website" },
   twitter: { card: "summary_large_image", title: "Shubhranshu Sudeepta Panda", description: "Java Backend Developer · Spring Boot · REST APIs · MySQL", images: ["/og.png"] },
   other: { copyright: "© 2026 Shubhranshu Sudeepta Panda. All rights reserved." },
