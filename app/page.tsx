@@ -2,6 +2,9 @@
 
 import { FormEvent, useEffect, useRef, useState } from "react";
 
+const RESUME_VIEW = "https://drive.google.com/file/d/1gf6ShgwjFwXQIQp3Canz-3aY57gUEHQS/view?usp=sharing";
+const RESUME_DOWNLOAD = "https://drive.google.com/uc?export=download&id=1gf6ShgwjFwXQIQp3Canz-3aY57gUEHQS";
+
 const skills = [
   { n: "01", title: "Languages", items: ["Java", "SQL"] },
   { n: "02", title: "Backend", items: ["Spring Boot", "REST APIs", "Spring Data JPA", "Spring Scheduler"] },
@@ -9,6 +12,38 @@ const skills = [
   { n: "04", title: "Tools", items: ["Git", "GitHub", "Maven", "Postman", "IntelliJ IDEA"] },
   { n: "05", title: "Core CS", items: ["DSA", "OOP", "DBMS", "Operating Systems", "Networks"] },
   { n: "06", title: "Practice", items: ["API Design", "Validation", "Exception Handling", "Structured Responses"] },
+];
+
+// Add project links here when ready — empty string shows a "coming soon" tag instead.
+const projects = [
+  {
+    n: "01",
+    date: "Sep 2025",
+    title: "IncidentFlow",
+    subtitle: "Smart Incident and Complaint Routing API",
+    stack: ["Java", "Spring Boot", "MySQL", "REST APIs"],
+    points: [
+      "Creates, assigns, tracks, and resolves tickets across departments with status and priority workflows.",
+      "Models users, departments, incidents, comments, and assignments with validation and structured responses.",
+      "Adds SLA tracking, flexible filtering, and dashboard analytics by status, priority, department, and deadline.",
+    ],
+    code: "",
+    demo: "",
+  },
+  {
+    n: "02",
+    date: "Nov 2025",
+    title: "WatchTower",
+    subtitle: "Website and API Uptime Monitoring System",
+    stack: ["Java", "Spring Boot", "MySQL", "Spring Scheduler"],
+    points: [
+      "Tracks availability, response time, status codes, and downtime history for websites and APIs.",
+      "Runs scheduled background checks with Spring Scheduler and stores every monitoring result.",
+      "Provides monitor, alert, downtime, analytics, and dashboard APIs with uptime and response-time metrics.",
+    ],
+    code: "",
+    demo: "",
+  },
 ];
 
 function Arrow() {
@@ -23,8 +58,33 @@ export default function Home() {
   const resumeButtonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
+    const stored = window.localStorage.getItem("theme");
+    if (stored === "light" || stored === "dark") setTheme(stored);
+    else if (window.matchMedia("(prefers-color-scheme: light)").matches) setTheme("light");
+  }, []);
+
+  useEffect(() => {
     document.documentElement.dataset.theme = theme;
+    window.localStorage.setItem("theme", theme);
   }, [theme]);
+
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const targets = document.querySelectorAll(".reveal");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: "0px 0px -8% 0px" }
+    );
+    targets.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     function closeResume(event: MouseEvent) {
@@ -64,8 +124,8 @@ export default function Home() {
         <div className="resume-control" ref={resumeRef}>
           <button ref={resumeButtonRef} type="button" aria-expanded={resumeOpen} aria-controls="resume-menu" onClick={() => setResumeOpen(!resumeOpen)}>Resume <span aria-hidden="true">{resumeOpen ? "−" : "+"}</span></button>
           <div className={`resume-menu ${resumeOpen ? "is-open" : ""}`} id="resume-menu" hidden={!resumeOpen}>
-            <a href="https://drive.google.com/file/d/1XZvioqIXwk9gZedDAID0TvaKyqzqsdOX/view?usp=sharing" target="_blank" rel="noreferrer">View resume <Arrow /></a>
-            <a href="https://drive.google.com/uc?export=download&id=1XZvioqIXwk9gZedDAID0TvaKyqzqsdOX">Download PDF <span aria-hidden="true">↓</span></a>
+            <a href={RESUME_VIEW} target="_blank" rel="noreferrer">View resume <Arrow /></a>
+            <a href={RESUME_DOWNLOAD}>Download PDF <span aria-hidden="true">↓</span></a>
           </div>
         </div>
         <button className="theme-button" onClick={() => setTheme(theme === "dark" ? "light" : "dark")} aria-label="Toggle color theme">
@@ -79,8 +139,8 @@ export default function Home() {
           <a key={item} href={`#${item.toLowerCase()}`} onClick={() => setMenuOpen(false)}><small>0{i + 1}</small>{item}<Arrow /></a>
         ))}
         <div className="mobile-resume">
-          <a href="https://drive.google.com/file/d/1XZvioqIXwk9gZedDAID0TvaKyqzqsdOX/view?usp=sharing" target="_blank" rel="noreferrer">View resume <Arrow /></a>
-          <a href="https://drive.google.com/uc?export=download&id=1XZvioqIXwk9gZedDAID0TvaKyqzqsdOX">Download PDF <span aria-hidden="true">↓</span></a>
+          <a href={RESUME_VIEW} target="_blank" rel="noreferrer">View resume <Arrow /></a>
+          <a href={RESUME_DOWNLOAD}>Download PDF <span aria-hidden="true">↓</span></a>
         </div>
       </nav>
 
@@ -105,7 +165,7 @@ export default function Home() {
 
         <section className="about section" id="about">
           <p className="section-index">01 / About</p>
-          <div className="about-layout">
+          <div className="about-layout reveal">
             <div className="portrait-wrap">
               <div className="portrait-frame"><img src="/profile.jpg" alt="Shubhranshu Sudeepta Panda" width="1024" height="1024" loading="eager" /></div>
               <span className="portrait-note">B.Tech CSE · 2026</span>
@@ -120,7 +180,7 @@ export default function Home() {
 
         <section className="skills section" id="skills">
           <p className="section-index">02 / Capabilities</p>
-          <div className="section-title-row"><h2>A toolkit for<br />reliable systems.</h2><p>From request to response, database to deployment.</p></div>
+          <div className="section-title-row reveal"><h2>A toolkit for<br />reliable systems.</h2><p>From request to response, database to deployment.</p></div>
           <div className="skill-list">
             {skills.map((skill) => <article className="skill-row" key={skill.n}><span>{skill.n}</span><h3>{skill.title}</h3><p>{skill.items.join(" · ")}</p><b aria-hidden="true">+</b></article>)}
           </div>
@@ -128,7 +188,7 @@ export default function Home() {
 
         <section className="education section" id="education">
           <p className="section-index">03 / Education</p>
-          <div className="education-grid">
+          <div className="education-grid reveal">
             <div className="edu-intro"><h2>Learning with<br /><em>intent.</em></h2><p>Building a technical foundation through coursework, certification, and hands-on practice.</p></div>
             <div className="timeline">
               <article><time>2022—2026</time><div><p>B.Tech · Computer Science & Engineering</p><h3>Vellore Institute of Technology, Amaravati</h3></div></article>
@@ -139,28 +199,38 @@ export default function Home() {
 
         <section className="projects section" id="projects">
           <p className="section-index">04 / Selected work</p>
-          <div className="section-title-row"><h2>Backend work,<br /><em>built with intent.</em></h2><p>Two systems designed around real operational workflows, reliable data, and useful APIs.</p></div>
-          <div className="project-grid">
-            <article className="project-card project-a">
-              <div className="project-meta"><span>Sep 2025</span><span>01</span></div>
-              <h3>IncidentFlow</h3>
-              <p className="project-subtitle">Smart Incident and Complaint Routing API</p>
-              <p className="project-stack">Java · Spring Boot · MySQL · REST APIs</p>
-              <ul><li>Creates, assigns, tracks, and resolves tickets across departments with status and priority workflows.</li><li>Models users, departments, incidents, comments, and assignments with validation and structured responses.</li><li>Adds SLA tracking, flexible filtering, and dashboard analytics by status, priority, department, and deadline.</li></ul>
-            </article>
-            <article className="project-card project-b">
-              <div className="project-meta"><span>Nov 2025</span><span>02</span></div>
-              <h3>WatchTower</h3>
-              <p className="project-subtitle">Website and API Uptime Monitoring System</p>
-              <p className="project-stack">Java · Spring Boot · MySQL · REST APIs</p>
-              <ul><li>Tracks availability, response time, status codes, and downtime history for websites and APIs.</li><li>Runs scheduled background checks with Spring Scheduler and stores every monitoring result.</li><li>Provides monitor, alert, downtime, analytics, and dashboard APIs with uptime and response-time metrics.</li></ul>
-            </article>
+          <div className="section-title-row reveal"><h2>Backend work,<br /><em>built with intent.</em></h2><p>Two systems designed around real operational workflows, reliable data, and useful APIs.</p></div>
+          <div className="project-list">
+            {projects.map((project) => (
+              <article className="project-row reveal" key={project.n}>
+                <div className="project-side">
+                  <span className="project-num">{project.n}</span>
+                  <span className="project-date">{project.date}</span>
+                </div>
+                <div className="project-main">
+                  <h3>{project.title}</h3>
+                  <p className="project-subtitle">{project.subtitle}</p>
+                  <div className="project-tags">
+                    {project.stack.map((tag) => <span key={tag}>{tag}</span>)}
+                  </div>
+                  <ul>
+                    {project.points.map((point) => <li key={point}>{point}</li>)}
+                  </ul>
+                  <div className="project-links">
+                    {project.code
+                      ? <a href={project.code} target="_blank" rel="noreferrer">View code <Arrow /></a>
+                      : <span className="link-soon">Code — coming soon</span>}
+                    {project.demo && <a href={project.demo} target="_blank" rel="noreferrer">Live demo <Arrow /></a>}
+                  </div>
+                </div>
+              </article>
+            ))}
           </div>
         </section>
 
         <section className="contact section" id="contact">
           <p className="section-index">05 / Contact</p>
-          <div className="contact-head"><p>Have a role, idea, or collaboration in mind?</p><h2>Let&apos;s make it<br /><em>work.</em></h2></div>
+          <div className="contact-head reveal"><p>Have a role, idea, or collaboration in mind?</p><h2>Let&apos;s make it<br /><em>work.</em></h2></div>
           <div className="contact-bottom">
             <form onSubmit={sendMail}>
               <label><span>01</span> What&apos;s your name?<input name="name" type="text" placeholder="Your name" required /></label>
