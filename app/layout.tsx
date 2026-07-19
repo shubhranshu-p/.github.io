@@ -1,6 +1,16 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Archivo, Bebas_Neue, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: [
+    { media: "(prefers-color-scheme: dark)", color: "#121021" },
+    { media: "(prefers-color-scheme: light)", color: "#f4f1e8" },
+  ],
+};
 
 const archivo = Archivo({ variable: "--font-sans", subsets: ["latin"] });
 const display = Bebas_Neue({ variable: "--font-display", weight: "400", subsets: ["latin"] });
